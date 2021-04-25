@@ -1,0 +1,29 @@
+cors - to access the data from other endpoint.
+axios - to access the api.
+mongoose - to connect backend with MongoDB.
+bcryptjs - to hash the password.
+jsonwebtoken - to manage session for user.
+
+users
+1. sudip@gmail.com - 12345
+
+features
+1. registration of user
+2. login 
+3. data saved on mongodb remotely
+4. password encypted
+5. JsonWebToken to create a session
+6. 
+
+routes
+frontend:
+1. /register
+2. /login
+3. /home
+4.
+
+backend:
+1. /api/user/register
+2. /api/user/login
+3. /api/user/image
+4. /api/user/:id
