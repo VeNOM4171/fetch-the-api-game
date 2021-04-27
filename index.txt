@@ -13,17 +13,15 @@ features
 3. data saved on mongodb remotely
 4. password encypted
 5. JsonWebToken to create a session
-6. 
+6. fetching & managing data from hackernews Api
 
 routes
 frontend:
 1. /register
 2. /login
 3. /home
-4.
+
 
 backend:
 1. /api/user/register
 2. /api/user/login
-3. /api/user/image
-4. /api/user/:id

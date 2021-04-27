@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Api1Page from "./api1Page";
+import HackerNewsApi from "./hnApi";
  
 class HomePage extends Component {
   state = {}
@@ -8,7 +8,7 @@ class HomePage extends Component {
     console.log(this.props);
     return (
       <>
-        <Api1Page />
+        <HackerNewsApi />
       </>
     );
   }

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { apiURL } from "../config.json";
 
 const Registration = (props) => {
   const {history} = props;
@@ -11,13 +10,13 @@ const Registration = (props) => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  // useEffect(() => {
-  //   if(localStorage.getItem("authToken")){
-  //     history.replace({
-  //       pathname : "/home",
-  //     });
-  //   }
-  // },[history]);
+  useEffect(() => {
+    if(localStorage.getItem("authToken")){
+      history.replace({
+        pathname : "/home",
+      });
+    }
+  },[history]);
 
   const registerHandler = async (e) => {
     e.preventDefault();

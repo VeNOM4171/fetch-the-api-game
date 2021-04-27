@@ -24,7 +24,7 @@ class App extends Component {
             path="/not-found"
             render={(props) => <PageNotFound {...props} />}
           />
-          <Redirect from="/" exact to="/register" />
+          <Redirect from="/" exact to="/home" />
           <Redirect to="/not-found" />
         </Switch>
       </>

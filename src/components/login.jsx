@@ -10,12 +10,12 @@ const Login = (props) => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  // useEffect(() => {
-  //   if(localStorage.getItem("authToken")){
-  //     console.log(`Token :${localStorage.getItem("authToken")}`)
-  //     history.replace("/home");
-  //   }
-  // },[history]);
+  useEffect(() => {
+    if(localStorage.getItem("authToken")){
+      console.log(`Token :${localStorage.getItem("authToken")}`)
+      history.replace("/home");
+    }
+  },[history]);
 
   const loginHandler = async (e) => {
     e.preventDefault();
@@ -29,10 +29,6 @@ const Login = (props) => {
       await axios.post("api/user/login", { email, password}, config)
         .then(response => response.json())
         .then(data => console.log(data));
-      // const {data} = await axios.post("api/user/login", { email, password}, config);
-      // // localStorage.setItem("authToken", data.token);
-      // history.push("/homePage");  
-      // console.log(data);
     } catch (error) {
       setError(error.response.data.error);
     }
